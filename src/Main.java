@@ -1,4 +1,5 @@
 import planet.*;
+import robot.*;
 
 import java.util.Random;
 
@@ -29,6 +30,7 @@ public class Main {
             robot.run();
             robot.talk();
             robot.bang();
+            robot.armor();
 
         } else if (form > 3 && form < 9) {
             System.out.println("Form robot - 2 ");
@@ -38,12 +40,15 @@ public class Main {
             first.run();
             first.talk();
             first.bang();
+            first.armor();
+
         } else {
             System.out.println("Form robot - 3");
             RobotUpgrade second = new RobotUpgrade("R2D2", 7, 30, false, true);
             System.out.println("My model: " + second.getModel() + "  My speed: " + second.getSpeed() + " km/h " + " My radius work: " + second.getWorkArea() + " m " + " I have wi-fi: " + second.isWifi() + " I have intelect: " + second.isArtificalIntelligence());
             second.run();
             second.bang();
+            second.armor();
 
         }
 
@@ -53,7 +58,9 @@ public class Main {
         if (randPlanet == 'A') {
             System.out.println("I was kidnapped to the Sea planet");
             listPlanet planetSea = listPlanet.SEA;
+
             planetSea.suit();
+
         } else if (randPlanet == 'B') {
             System.out.println("I was kidnapped to the  Wind planet");
             listPlanet planetWind = listPlanet.WIND;
