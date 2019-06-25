@@ -4,9 +4,7 @@ import main.java.planet.ListPlanet;
 import main.java.robot.Robot;
 import main.java.robot.RobotFirst;
 import main.java.robot.RobotUpgrade;
-
 import java.util.Random;
-
 
 public class Main {
 
@@ -23,7 +21,6 @@ public class Main {
 
         Robot robot = null;
         ListPlanet planet = null;
-
 
         // definition of the form of the robot
         if (form < 4) {
