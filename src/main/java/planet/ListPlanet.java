@@ -1,26 +1,19 @@
 package main.java.planet;
 
-public enum ListPlanet implements Planet {
+public enum ListPlanet {
+    SEA("I was kidnapped to the  Sea planet."),
 
-    A {
-        @Override
-        public void suit(String namePlanet) {
-            System.out.println("I was kidnapped to the  Sea planet");
-            System.out.println("My armor is a water suit.");
-        }
-    },
-    B {
-        @Override
-        public void suit(String namePlanet) {
-            System.out.println("I was kidnapped to the  Wind planet");
-            System.out.println("My armor is a wind armor");
-        }
-    },
-    C {
-        @Override
-        public void suit(String namePlanet) {
-            System.out.println("I was kidnapped to the  Sun planet");
-            System.out.println("My armor is a reflectors");
-        }
+    SUN("I was kidnapped to the  Sun planet."),
+
+    WIND("I was kidnapped to the  Wind planet.");
+
+    private String planet;
+
+    ListPlanet(String p) {
+        this.planet = p;
+    }
+
+    public String getPlanet() {
+        return planet;
     }
 }
